@@ -1,0 +1,108 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  /* border: 1px solid #000; */
+}
+
+body {
+  font-family: system-ui, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans,
+    sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+button{
+  background: none;
+  border: 1px solid black;
+}
+
+#header {
+  position: fixed;
+  top: 0;
+  height: 80px;
+  z-index: 99;
+}
+
+.fakenavbar{
+  width: 100%;
+  height: 80px;
+}
+.navbar {
+  width: 100%;
+  height: 50%;
+}
+
+.whitebar {
+  background-color: #fff;
+  height: 60%;
+}
+
+.blackbar {
+  background-color: #000;
+  height: 40%;
+}
+
+.bandname {
+  position: absolute;
+  left: 50px;
+  top: 4px;
+}
+.page-content{
+  position: relative;
+}
+#slider{
+  position: relative;
+  
+  height: 500px;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.container{
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+
+
+input[type="checkbox"],input[type="radio"]{
+  display: none;
+  }
+
+  .page-content{
+    height: 0;
+  }
+
+@media (min-width: 768px) {
+  #header {
+    position: fixed;
+    top: 0;
+    height: 200px;
+    width: 100%;
+  }
+  .fakenavbar{
+    width: 100%;
+    height: 200px;
+  }
+  .blackbar {
+    position: absolute;
+    top: 0;
+    height: 25%;
+  }
+  .whitebar {
+    position: absolute;
+    bottom: 0;
+    height: 75%;
+  }
+  .bandname {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 20px;
+  }
+  
+}
+
+@media (min-width: 1200px) {
+}

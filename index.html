@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <head>
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/Navbar.css">
+    <link rel="stylesheet" href="./css/slider.css">
+    <link rel="stylesheet" href="./css/collection.css">
+    <link rel="stylesheet" href="./css/browse.css">
+    <link rel="stylesheet" href="./css/weekly.css">
+    <link rel="stylesheet" href="./css/blog.css">
+    <link rel="stylesheet" href="./css/sentence.css">
+    
+    
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+
+  </head>
+  
+
+  <style>
+
+  .slider img{
+    animation-duration: 1s;
+  }
+
+  .sliderp h1,h4,button{
+    animation-duration: 1s;
+  }
+
+
+  
+    </style>
+
+
+  </style>
+</head>
+
+<body>
+<!-- 頂端列 -->
+  <div id="header" class="container">
+    <div class="navbar whitebar">
+      <div class="lgwhitebar">
+      <div class="socialLogo">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+          <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-google" viewBox="0 0 16 16">
+          <path d="M15.545 6.558a9.42 9.42 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.689 7.689 0 0 1 5.352 2.082l-2.284 2.284A4.347 4.347 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.792 4.792 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.702 3.702 0 0 0 1.599-2.431H8v-3.08h7.545z"/>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+          <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-pinterest" viewBox="0 0 16 16">
+          <path d="M8 0a8 8 0 0 0-2.915 15.452c-.07-.633-.134-1.606.027-2.297.146-.625.938-3.977.938-3.977s-.239-.479-.239-1.187c0-1.113.645-1.943 1.448-1.943.682 0 1.012.512 1.012 1.127 0 .686-.437 1.712-.663 2.663-.188.796.4 1.446 1.185 1.446 1.422 0 2.515-1.5 2.515-3.664 0-1.915-1.377-3.254-3.342-3.254-2.276 0-3.612 1.707-3.612 3.471 0 .688.265 1.425.595 1.826a.24.24 0 0 1 .056.23c-.061.252-.196.796-.222.907-.035.146-.116.177-.268.107-1-.465-1.624-1.926-1.624-3.1 0-2.523 1.834-4.84 5.286-4.84 2.775 0 4.932 1.977 4.932 4.62 0 2.757-1.739 4.976-4.151 4.976-.811 0-1.573-.421-1.834-.919l-.498 1.902c-.181.695-.669 1.566-.995 2.097A8 8 0 1 0 8 0z"/>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+          <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+        </svg>
+      </div>
+
+      <label for="checkmenu" class="toggle1">
+        <span></span>
+      </label>
+      <input type="checkbox" id="checkmenu">
+      <div id="navbarlist">
+        <ul class="ulout">
+          <li class="home">Home</li>
+          <div id="pageout">
+            <li id="liout1">page
+              <label for="ulin1" class="submenu pagemenu">
+                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="angle-down"
+                  class="svg-inline--fa fa-angle-down fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 320 512">
+                  <path fill="currentColor"
+                    d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z">
+                  </path>
+                </svg>
+
+              </label>
+            </li>
+            <input type="checkbox" id="ulin1" >
+            <ul class="ulin" id="typegraphy">
+              <li>Typography</li>
+              <li>404</li>
+              <div id="blogout">
+                <li id="liout2">Blog style
+                  <label for="ulin2" class="submenu">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="angle-down"
+                      class="svg-inline--fa fa-angle-down fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 320 512">
+                      <path fill="currentColor"
+                        d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z">
+                      </path>
+                    </svg>
+
+                  </label>
+                </li>
+                <input type="radio" id="ulin2" class="ulin" name="ullist">
+                <ul class="ulin ulinner" id="blogStyle">
+                  <li>Blog Masonry 3 cols</li>
+                  <li>Blog Grid 3 Cols</li>
+                  <li>Blog Boxed</li>
+                </ul>
+              </div>
+
+              <div id="postout">
+                <li id="liout3">Post formats
+                  <label for="ulin3" class="submenu">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="angle-down"
+                      class="svg-inline--fa fa-angle-down fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 320 512">
+                      <path fill="currentColor"
+                        d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z">
+                      </path>
+                    </svg>
+
+                  </label>
+                </li>
+                <input type="radio" id="ulin3" class="ulin" name="ullist">
+                <ul class="ulin ulinner" id="postFormats">
+                  <li>image Format</li>
+                  <li>gallery Format</li>
+                  <li>audio Format</li>
+                  <li>video Format</li>
+                  <li>quoto Format</li>
+                  <li>link Format</li>
+                  <li>aside Format</li>
+                </ul>
+              </div>
+              <div id="headerout">
+                <li id="liout4">Header style
+                  <label for="ulin4" class="submenu">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="angle-down"
+                      class="svg-inline--fa fa-angle-down fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 320 512">
+                      <path fill="currentColor"
+                        d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z">
+                      </path>
+                    </svg>
+
+                  </label>
+                </li>
+                <input type="radio" id="ulin4" class="ulin" name="ullist">
+                <ul class="ulin ulinner" id="headerStyle">
+                  <li>header style1</li>
+                  <li>header style2</li>
+                  <li>header style3</li>
+                </ul>
+              </div>
+
+              <div id="footerout">
+                <li id="liout5">Footer style
+                  <label for="ulin5" class="submenu">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="angle-down"
+                      class="svg-inline--fa fa-angle-down fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 320 512">
+                      <path fill="currentColor"
+                        d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z">
+                      </path>
+                    </svg>
+
+                  </label>
+                </li>
+                <input type="radio" id="ulin5" class="ulin" name="ullist">
+                <ul class="ulin ulinner" id="footerStyle">
+                  <li>footer style1</li>
+                  <li>footer style2</li>
+                  <li>footer style3</li>
+                </ul>
+              </div>
+              <div id="sidebarout">
+                <li id="liout6">Side bar
+                  <label for="ulin6" class="submenu">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="angle-down"
+                      class="svg-inline--fa fa-angle-down fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 320 512">
+                      <path fill="currentColor"
+                        d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z">
+                      </path>
+                    </svg>
+
+                  </label>
+                </li>
+                <input type="radio" id="ulin6" class="ulin" name="ullist">
+                <ul class="ulin ulinner" id="sidebarStyle">
+                  <li>sidebar left</li>
+                  <li>sidebar right</li>
+                  <li>no sidebar </li>
+                </ul>
+              </div>
+
+
+            </ul>
+          </div>
+
+          </li>
+          <li>Products</li>
+          <li>About</li>
+          <li>Blog</li>
+          <li>Contacts</li>
+          <li>Cart</li>
+        </ul>
+
+      </div>
+      <label for="searchCBox" class="searchBtn" id="smSearchBtn">
+        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" style="width: 20px;" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path></svg>
+      </label>
+      
+
+      <img src="https://livedemo00.template-help.com/wt_58907/images/logo.png" alt="" class="bandname">
+
+      <div class="bag">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16">
+          <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"/>
+        </svg>
+        <div>1</div>
+      </div>
+    </div>
+    </div>
+    <div class="navbar blackbar">
+      <div class="lgblackbar">
+        <label for="checkmenu2" class="toggle2">
+          <span></span>
+        </label>
+        <input type="checkbox" id="checkmenu2">
+        <div id="blacklist">
+          <ul>
+            <li>Order</li>
+            <li>Compare</li>
+            <li>Wishlist</li>
+            <li>My Account</li>
+          </ul>
+        </div>
+        <div class="phone">
+          <p>Call us: </p>
+          <p>+3(800) 2345-6789</p> 
+          <p style="color: rgb(145, 144, 144);">7 Days a week from 9:00 am to 7:00 pm</p>
+        </div>
+        <div class="search">
+          <form action="#">
+            <input type="checkbox" id="searchCBox" >
+            <input type="text" id="search" placeholder="Search">
+            <button id="mdSearchBtn" class="searchBtn">
+              <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path></svg>
+            </button>
+            
+          </form>
+
+        </div>
+        <div class="dollar">
+          <select name="" id="dollarSelect">
+            <option selected> USD </option>
+            <option> EUA </option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+  <main class="page-content">
+    <div class="fakenavbar"></div>
+
+    <div id="slider" class="container">
+
+      <input type="radio" id="sliderCircle1" name="slidercircle" checked>
+      <div id="slider1" class="slider">
+        <img src="./img/index-01.jpg" alt="" class="animate__fadeIn">
+        <div id="sliderp1" class="sliderp">
+          <h1 class="animate__fadeInUp"> Retailer Fairystyle: </h1>
+          <h4 class="animate__fadeInUp"> Brand Store. </h4>
+          <button class="animate__fadeInUp">SHOP NOW!</button>
+        </div>
+        
+      </div>
+
+      <input type="radio" id="sliderCircle2" name="slidercircle">
+      <div id="slider2" class="slider">
+        <img src="./img/index-02.jpg" alt="" class="animate__fadeIn">
+        <div id="sliderp2" class="sliderp">
+          <h1 class="animate__fadeInUp"> Retailer Fairystyle: </h1>
+          <h4 class="animate__fadeInUp"> Brand Store. </h4>
+          <button class="animate__fadeInUp">SHOP NOW!</button>
+        </div>
+      </div>
+
+      <input type="radio" id="sliderCircle3" name="slidercircle">
+      <div id="slider3" class="slider">
+        <img src="./img/index-03.jpg" alt="" class="animate__fadeIn">
+        <div id="sliderp3" class="sliderp">
+          <h1 class="animate__fadeInUp"> Retailer Fairystyle: </h1>
+          <h4 class="animate__fadeInUp"> Brand Store. </h4>
+          <button class="animate__fadeInUp">SHOP NOW!</button>
+        </div>
+      </div>
+
+      <!-- <button class="button-prev"></button>
+      <button class="button-next"></button> -->
+
+      <div class="circlegroup">
+        <label for="sliderCircle1">
+          <span class="circle" id="circle1"></span>
+        </label>
+        
+        
+        <label for="sliderCircle2">
+          <span class="circle" id="circle2"></span>
+        </label>
+        
+        
+        <label for="sliderCircle3">
+          <span class="circle" id="circle3"></span>
+        </label>
+      </div>
+      
+      
+
+      <div class="pagintion"></div>
+    </div>
+    <div id="collection" class="container">
+      <div class="row">
+        <div class="col"><img src="./img/index-04.jpg" alt=""></div>
+        <div class="col">
+          <img src="./img/index-05.jpg" alt="">
+          <img src="./img/index-06.jpg" alt="">
+        </div>
+        <div class="col"><img src="./img/index-07.jpg" alt=""></div>
+      </div>
+    </div>
+    <div id="browse" class="container">
+      <h1 style="text-align: center;">BROWSE Our Categories</h1>
+      <hr style="width: 100px; border: 1px solid black; border-radius: 15px;">
+      <div class="rowout">
+        <div class="row">
+          <div class="col">
+            <img src="./img/index-08.jpg" alt="" id="browseImg1">
+            <div class="tag" id="browsetag1">
+              <p> WOMEN's </p>
+            </div>
+            
+          </div>
+          <div class="col">
+            <img src="./img/index-09.jpg" alt="" id="browseImg2">
+            <div class="tag" id="browsetag2">
+              <p> MEN's </p>
+            </div>
+          </div>
+          <div class="col">
+            <img src="./img/index-10.jpg" alt="" id="browseImg3">
+            <div class="tag" id="browsetag3">
+              <p> BAGS </p>
+            </div>
+          </div>
+          <div class="col">
+            <img src="./img/index-11.jpg" alt="" id="browseImg4">
+            <div class="tag" id="browsetag4">
+              <p> SHOES </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    <div class="container" id="weekly">
+      <h1 style="text-align: center;">WEEKLY Featured Products</h1>
+        <hr style="width: 100px; border: 1px solid black; border-radius: 15px;">
+    
+      <div class="swiper weekly" >
+        <div class="swiper-wrapper row" id="weeklyRow">
+          <div class="swiper-slide col">
+            <div class="buyNow " id="buynow1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16">
+              <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"/>
+              </svg></div>
+            <img src="./img/index-12.jpg" alt="">
+            <div class="productName">Two-tone bag</div>
+            <div class="price">$258.89</div>
+            <div class="heart" id="heart1"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="heart" class="svg-inline--fa fa-heart fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"></path></svg></div>
+            <div class="tag"></div>
+          </div>
+          <div class="swiper-slide col">
+            <div class="buyNow " id="buynow1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16">
+              <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"/>
+              </svg></div>
+            <img src="./img/index-13.jpg" alt="">
+            <div class="productName">Two-tone bag</div>
+            <div class="price">$258.89</div>
+            <div class="heart" id="heart1"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="heart" class="svg-inline--fa fa-heart fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"></path></svg></div>
+            <div class="tag"></div>
+          </div>
+          <div class="swiper-slide col">
+            <div class="buyNow " id="buynow1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16">
+              <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"/>
+              </svg></div>
+            <img src="./img/index-14.jpg" alt="">
+            <div class="productName">Two-tone bag</div>
+            <div class="price">$258.89</div>
+            <div class="heart" id="heart1"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="heart" class="svg-inline--fa fa-heart fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"></path></svg></div>
+            <div class="tag"></div>
+          </div>
+          <div class="swiper-slide col">
+            <div class="buyNow " id="buynow1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16">
+              <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"/>
+              </svg></div>
+            <img src="./img/index-15.jpg" alt="">
+            <div class="productName">Two-tone bag</div>
+            <div class="price">$258.89</div>
+            <div class="heart" id="heart1"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="heart" class="svg-inline--fa fa-heart fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"></path></svg></div>
+            <div class="tag"></div>
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+    <div id="about" class="container">
+      <div class="row" style="background-image: url(./img/index-16.jpg); background-repeat: no-repeat; background-size: cover;">
+        <div class="word">
+          <h1 style="text-align: center;">ABOUT Our Store</h1>
+        <hr style="width: 100px; border: 1px solid black; border-radius: 15px;">
+        <h4>WE WANT TO BE A DENIM BRAND FIRST OF ALL.</h4>
+        <p>
+
+          With the company's history dating 10 years back, we always felt desire to tell some kind of complete story with our clothes. So the original style mixed with an androgynous feel of a modern day makes us what we actually are.
+          
+          We like the design part of the clothes as much as you do. We are also sure that the visual appeal of any wardrobe item can be easily integrated with the practicality and a balance can be achieved.</p>
+        </div>
+        
+      </div>
+    </div>
+    <div class="container" id="blog">
+      <h1 style="text-align: center;">OUR Blog</h1>
+        <hr style="width: 100px; border: 1px solid black; border-radius: 15px;">
+    
+      <div class="swiper blog" >
+        <div class="swiper-wrapper row" id="blogRow">
+          
+          <div class="swiper-slide col">
+            <div class="imgtop">
+              <img src="./img/index-17.jpg" alt="">
+            </div>
+            <div class="word">
+              <h5>BODYSUIT BANGERS</h5>
+              <p>Posted by Amanda • 1 Comments</p>
+              <p>Bodysuit is back again to the list of fashion latest trends. So you better dress yourself down with the help of that small but stylish thing out of your wardrobe. Be relaxed and easy-going with ribbed or button-down bodysuits, paired with wide jeans or jogging pants.</p>
+            </div>
+          </div>
+          <div class="swiper-slide col">
+            <div class="imgtop">
+              <img src="./img/index-18.jpg" alt="">
+            </div>
+            <div class="word">
+              <h5>SCREAM QUEENS STYLE INSPO</h5>
+              <p>Posted by Amanda • 1 Comments</p>
+              <p>Halloween is only couple of days away and we have chosen our most adored scream queens to bring you some style inspirations. The Addams Family Wednesday signature style is the mix of white and office like style with gothic...</p>
+            </div>
+          </div>
+          <div class="swiper-slide col">
+            <div class="imgtop">
+              <img src="./img/index-19.jpg" alt="">
+            </div>
+            <div class="word">
+              <h5>CELEB TRENDS: HATS</h5>
+              <p>Posted by Amanda • 1 Comments</p>
+              <p>Winter time means that the season of hats is back. So regardless of do you like a trendy boho floppy hat, a gymesque baseball hat or a classic old-school wide brimmed one, there's a hat which calls for you specifically...
+
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+    <div id="sentence">
+      <div class="redblock">
+          
+        
+          <div class="swiper sentence" >
+            <div class="swiper-wrapper row" id="sentenceRow">
+              
+              <div class="swiper-slide col">
+                <img src="./img/index-20.jpg" alt="">
+                <div class="word">
+      
+                
+                <p>"Thank you very much. I'm impressed with your service. I've already told my
+                  friends about your company and your quick response, thanks again!"
+                  — Bernard Show</p>
+                  </div>
+                </div>
+              
+              <div class="swiper-slide col">
+                <img src="./img/index-21.jpg" alt="">
+                <div class="word">
+      
+                
+                <p>"I just don't know how to describe your services... They are extraordinary! I am quite happy with them! Just keep up going this way!"
+                  — Amanda Cooper</p>
+                  </div>
+                
+              </div>
+              <div class="swiper-slide col">
+                <img src="./img/index-22.jpg" alt="">
+                <div class="word">
+      
+                
+                <p>Thanks a lot for the quick response. I was really impressed, your solution is excellent!! Your competence is justified!!!"
+                  — Rebecca Smith</p>
+                  </div>
+              </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+        
+      </div>
+    </div>
+    <div id="product" class="container">
+      <div class="row">
+        <div class="col">
+          <img src="./img/index-15.jpg" alt="">
+          <div class="word">
+            <div class="tags">
+              <div class="tag">Accessories</div>,<div class="tag">sports</div>, <div class="tag">Women's</div>, <div class="tag"> Bags</div>
+              
+            </div>
+            <div class="name">Woven fabric shopper</div>
+            <div class="price">$220.06</div>
+          </div>
+        </div>
+        <div class="col">
+          <img src="./img/index-12.jpg" alt="">
+          <div class="word">
+            <div class="tags">
+              <div class="tag">Women's</div>, <div class="tag"> Bags</div>
+            </div>
+            <div class="name">Two-tone bag</div>
+            <div class="price">127.50</div>
+          </div>
+        </div>
+        <div class="col">
+          <img src="./img/index-13.jpg" alt="">
+          <div class="word">
+            <div class="tags">
+              <div class="tag"> Men's</div>
+            </div>
+            <div class="name">Striped sweater</div>
+            <div class="price">131.75</div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <img src="./img/index-09.jpg" alt="">
+          <div class="word">
+            <div class="tags">
+              <div class="tag">Women's</div>,<div class="tag">Men's</div>, <div class="tag">shoes</div>, <div class="tag"> Bags</div>
+            </div>
+            <div class="name">Stretch blazer</div>
+            <div class="price">$187.00</div>
+          </div>
+        </div>
+        <div class="col">
+          <img src="./img/index-14.jpg" alt="">
+          <div class="word">
+            <div class="tags">
+              <div class="tag">Accessories</div>,<div class="tag">sports</div>
+            </div>
+            <div class="name">Cap-toe ballerina</div>
+            <div class="price">$112.20</div>
+          </div>
+        </div>
+        <div class="col">
+          <img src="./img/index-13.jpg" alt="">
+          <div class="word">
+            <div class="tags">
+              <div class="tag">Men's</div>
+            </div>
+            <div class="name">Striped sweater</div>
+            <div class="price">131.75</div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <img src="./img/index-29.jpg" alt="">
+          <div class="word">
+            <div class="tags">
+              <div class="tag">Accessories</div>,<div class="tag">sports</div>, <div class="tag">Women's</div>, <div class="tag"> Bags</div>
+            </div>
+            <div class="name">Uneven hem top</div>
+            <div class="price">$220.06</div>
+          </div>
+        </div>
+        <div class="col">
+          <img src="./img/index-30.jpg" alt="">
+          <div class="word">
+            <div class="tags">
+              <div class="tag">Accessories</div>,<div class="tag">sports</div>, <div class="tag">Women's</div>, <div class="tag"> Bags</div>
+            </div>
+            <div class="name">Top with ribbed neckline</div>
+            <div class="price">$219.30</div>
+          </div>
+        </div>
+        <div class="col">
+          <img src="./img/index-31.jpg" alt="">
+          <div class="word">
+            <div class="tags">
+              <div class="tag">Accessories</div>,<div class="tag">sports</div>, <div class="tag">Women's</div>, <div class="tag"> Bags</div>
+            </div>
+            <div class="name">Check print tote bag</div>
+            <div class="price">$220.06</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="subscribe" class="container">
+      <div class="row">
+        <div class="word">
+          <h3>Get latest news delivered daily!</h3>
+          <p>We will send you breaking news right to your inbox</p>
+        </div>
+        <div class="inputemail">
+          <input type="text" value="Enter your e-mail">
+          <input type="button" value="SUBSCRIBE">
+        </div>
+      </div>
+    </div>
+    <div id="footer" class="container">
+      <div class="row">
+        <img src="https://livedemo00.template-help.com/wt_58907/images/logo-light.png" alt="">
+        <p>With the company's history dating 10 years back, we always felt desire to tell some kind of complete story with our clothes. So the original style mixed with an androgynous feel of a modern day makes us what we actually are.</p>
+        <div class="socialLogo">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+            <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-google" viewBox="0 0 16 16">
+            <path d="M15.545 6.558a9.42 9.42 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.689 7.689 0 0 1 5.352 2.082l-2.284 2.284A4.347 4.347 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.792 4.792 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.702 3.702 0 0 0 1.599-2.431H8v-3.08h7.545z"/>
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+            <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-pinterest" viewBox="0 0 16 16">
+            <path d="M8 0a8 8 0 0 0-2.915 15.452c-.07-.633-.134-1.606.027-2.297.146-.625.938-3.977.938-3.977s-.239-.479-.239-1.187c0-1.113.645-1.943 1.448-1.943.682 0 1.012.512 1.012 1.127 0 .686-.437 1.712-.663 2.663-.188.796.4 1.446 1.185 1.446 1.422 0 2.515-1.5 2.515-3.664 0-1.915-1.377-3.254-3.342-3.254-2.276 0-3.612 1.707-3.612 3.471 0 .688.265 1.425.595 1.826a.24.24 0 0 1 .056.23c-.061.252-.196.796-.222.907-.035.146-.116.177-.268.107-1-.465-1.624-1.926-1.624-3.1 0-2.523 1.834-4.84 5.286-4.84 2.775 0 4.932 1.977 4.932 4.62 0 2.757-1.739 4.976-4.151 4.976-.811 0-1.573-.421-1.834-.919l-.498 1.902c-.181.695-.669 1.566-.995 2.097A8 8 0 1 0 8 0z"/>
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+            <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+          </svg>
+        </div>
+        <p>FairyStyle 2016 | </p> <p>Privacy Policy</p>
+      </div>
+    </div>
+  </main>
+  
+  
+  
+  <script src="./js/jquery-3.6.0.min.js">  </script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper(".weekly", {
+        slidesPerView: 4,
+        spaceBetween: 30,
+        slidesPerGroup: 1,
+        loop: true,
+        loopFillGroupWithBlank: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+
+      var swiper = new Swiper(".blog", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        slidesPerGroup: 1,
+        loop: true,
+        loopFillGroupWithBlank: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+      var swiper = new Swiper(".sentence", {
+        
+        spaceBetween: 30,
+        effect: "fade",
+        loop: true,
+        loopFillGroupWithBlank: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    
+
+  
+  </script>
+
+</body>
+
+</html>

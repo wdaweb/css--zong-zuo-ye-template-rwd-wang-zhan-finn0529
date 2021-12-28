@@ -1,0 +1,119 @@
+#browse .row{
+  width: 480px;
+  margin: auto;
+  
+}
+#browse .col{
+  width: 46%;
+  margin: 2%;
+  float: left;
+  position: relative;
+}
+
+#browse img{
+  width: 100%;
+  cursor: pointer;
+}
+
+#browse .tag{
+  position: absolute;
+  width: 100%;
+  height: 60px;
+  bottom: 10%;
+  opacity: 0.8;
+  background: white;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+#browse .tag p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#browseImg1,:hover+#browsetag1{
+  bottom: 45%;
+  background: #000;
+  color: white;
+  
+}
+
+#browsetag1:hover{
+  bottom: 45%;
+  background: #000;
+  color: white;
+  
+}
+#browseImg2,:hover+#browsetag2{
+  bottom: 45%;
+  background: #000;
+  color: white;
+  
+}
+
+#browsetag2:hover{
+  bottom: 45%;
+  background: #000;
+  color: white;
+  
+}
+#browseImg3,:hover+#browsetag3{
+  bottom: 45%;
+  background: #000;
+  color: white;
+  
+}
+
+#browsetag3:hover{
+  bottom: 45%;
+  background: #000;
+  color: white;
+  
+}
+#browseImg4,:hover+#browsetag4{
+  bottom: 45%;
+  background: #000;
+  color: white;
+  
+}
+
+#browsetag4:hover{
+  bottom: 45%;
+  background: #000;
+  color: white;
+  
+}
+
+#browse .rowout {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+@media (min-width:768px){
+  #browse .row{
+    width: 80%;
+    
+    
+  }
+  #browse .col{
+    width: 40%;
+    margin: 5%;
+  }
+}
+
+@media (min-width:1200px){
+  #browse .row{
+    width: 1200px;
+    
+    
+  }
+  #browse .col{
+    margin: 1%;
+    width: 23%;
+    
+    
+  }
+}
