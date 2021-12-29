@@ -236,7 +236,7 @@ display: block;
     display: block;
   }
 
-  .dollar ,.phone,.socialLogo,.bag{
+  .dollar ,.phone,#header .socialLogo,.bag{
     display: none;
   }
 
@@ -453,19 +453,19 @@ display: block;
     color: rgb(255, 71, 71);
     cursor: pointer;
   }
-  .socialLogo{
+  #header .socialLogo{
     display: block;
     position: absolute;
     left: 20px;
     top: 50px;
 
   }
-  .socialLogo svg{
+  #header .socialLogo svg{
     margin: 5px;
     color: rgb(128, 128, 128);
   }
 
-  .socialLogo svg:hover{
+  #header .socialLogo svg:hover{
 
     color: rgb(255, 71, 71);
     cursor: pointer;
@@ -519,7 +519,7 @@ display: block;
     left: 100px;
     z-index: 30;
   }
-  .socialLogo{
+  #header .socialLogo{
     top: 80px;
     left: 10px;
     z-index: 30;

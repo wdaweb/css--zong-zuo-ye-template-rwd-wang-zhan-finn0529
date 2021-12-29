@@ -9,7 +9,7 @@
   
   #blog .col{
     width: 100%;
-    margin: auto;
+
     position: relative;
     text-align: center;
     cursor: pointer
@@ -17,4 +17,70 @@
   
   #blog img {
     width: 100%;
+  }
+
+  #blog .swiper-button-next{
+    background:white;
+    color: black;
+    display: none;
+    
+  }
+  #blog .swiper-button-next:after{
+    font-size: 2px;
+    
+  }
+  
+  #blog .swiper-button-next:hover{
+    
+    color: rgb(255, 0, 0);
+    
+  }
+  
+  #blog .swiper-button-prev{
+    background:white;
+    color: black;
+    display: none;
+    
+  }
+  #blog .swiper-button-prev:after{
+    font-size: 2px;
+    
+  }
+  
+  #blog .swiper-button-prev:hover{
+    
+    color: rgb(255, 0, 0);
+    
+  }
+
+  
+
+  #blog .swiper-pagination-bullet{
+    border: 3px solid rgb(255, 0, 0);
+    background: white;
+    width: 15px;
+    height: 15px;
+    opacity: 1;
+  }
+
+  #blog .swiper-pagination-bullet-active{
+    border: 3px solid rgb(255, 0, 0);
+    background: rgb(255, 0, 0);
+    width: 15px;
+    height: 15px;
+  }
+
+  @media (min-width:1200px){
+    #blog .swiper-button-prev{
+      display: flex;
+      top: 30%;
+    }
+    #blog .swiper-button-next{
+      display: flex;
+      top: 30%;
+    }
+  
+    #blog .swiper-pagination{
+      display: none;
+    }
   }

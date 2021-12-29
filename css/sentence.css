@@ -7,8 +7,8 @@
 }
 
 .redblock{
-  width: 80%;
-  height: 80%;
+  width: 90%;
+  height: 90%;
   background: #ff4747;
   color: white;
   text-align: center;
@@ -27,9 +27,76 @@
 }
 #sentence .col{
   background: #ff4747;
+  padding: 10px;
 }
 
 #sentence svg{
   width: 10px;
 }
 
+#sentence .swiper-pagination{
+  bottom: 0;
+}
+
+#sentence .swiper-pagination-bullet{
+  border: 3px solid rgb(255, 255, 255);
+  background: #ff4747;
+  width: 15px;
+  height: 15px;
+  opacity: 1;
+}
+
+#sentence .swiper-pagination-bullet-active{
+  border: 3px solid rgb(255, 255, 255);
+  background: rgb(255, 255, 255);
+  width: 15px;
+  height: 15px;
+}
+
+#sentence .swiper-button-next{
+  border: 1px solid rgba(255, 255, 255, 0.788);
+  color: rgb(255, 255, 255);
+  display: none;
+  
+}
+#sentence .swiper-button-next:after{
+  font-size: 2px;
+  
+}
+
+#sentence .swiper-button-next:hover{
+  
+  border: 1px solid rgb(255, 255, 255);
+  
+}
+
+#sentence .swiper-button-prev{
+  border: 1px solid rgba(255, 255, 255, 0.788);
+  color: rgb(255, 255, 255);
+  display: none;
+  
+}
+#sentence .swiper-button-prev:after{
+  font-size: 2px;
+  
+}
+
+#sentence .swiper-button-prev:hover{
+  
+  border: 1px solid rgb(255, 255, 255);
+  
+}
+
+
+@media (min-width:1200px){
+  #sentence .swiper-button-prev{
+    display: flex;
+  }
+  #sentence .swiper-button-next{
+    display: flex;
+  }
+
+  #sentence .swiper-pagination{
+    display: none;
+  }
+}

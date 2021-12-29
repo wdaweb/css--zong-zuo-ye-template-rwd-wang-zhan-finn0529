@@ -1,0 +1,180 @@
+#weeklyRow{
+width: 100%;
+margin: auto;
+}
+
+#weekly .weekly{
+  width: 90%;
+}
+
+#weekly .col{
+  width: 100%;
+  margin: auto;
+  position: relative;
+  text-align: center;
+  /* cursor: pointer */
+}
+
+#weekly img {
+  width: 100%;
+  cursor: pointer;
+}
+
+#weekly .buyNow{
+  transition: 0.5s;
+  width: 0;
+  height: 0;
+  background: #000;
+  border-radius: 50%;
+  color: white;
+  opacity: 0.8;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  display: block;
+  
+  
+}
+
+#weekly .buyNow svg {
+  
+  
+  width: 60%;
+  height: 60%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+
+}
+
+
+
+#weekly .heart svg {
+  color: rgb(146, 146, 146);
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+#weekly .heart svg:hover{
+  color: #ff4747;
+}
+
+#weekly .swiper-button-next{
+  background:white;
+  color: black;
+  
+}
+#weekly .swiper-button-next:after{
+  font-size: 2px;
+  
+}
+
+#weekly .swiper-button-next:hover{
+  
+  color: rgb(255, 0, 0);
+  
+}
+
+#weekly .swiper-button-prev{
+  background:white;
+  color: black;
+  
+}
+#weekly .swiper-button-prev:after{
+  font-size: 2px;
+  
+}
+
+#weekly .swiper-button-prev:hover{
+  
+  color: rgb(255, 0, 0);
+  
+}
+#weekly .buyNow:hover{
+  background: #ff4747;
+  
+  cursor: pointer;
+  width: 80px;
+  height: 80px;
+}
+
+#weeklyswiper1:hover>#buynow1{
+  
+  width: 80px;
+  height: 80px;
+}
+#weeklyswiper2:hover>#buynow2{
+  
+  width: 80px;
+  height: 80px;
+}
+
+#weeklyswiper3:hover>#buynow3{
+  
+  width: 80px;
+  height: 80px;
+}
+
+#weeklyswiper4:hover>#buynow4{
+  
+  width: 80px;
+  height: 80px;
+}
+
+#weeklyswiper1:hover>#heart1 svg{
+  opacity: 1;
+}
+#weeklyswiper2:hover>#heart2 svg{
+  opacity: 1;
+}
+
+#weeklyswiper3:hover>#heart3 svg{
+  opacity: 1;
+}
+
+#weeklyswiper4:hover>#heart4 svg{
+  opacity: 1;
+}
+
+
+
+
+/* about */
+
+#about{
+  position: relative;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+#about .row{
+  height: 500px;
+  width: 90%;
+  margin: auto;
+  padding: 50px;
+
+  
+}
+
+#about img{
+  width: 100%;
+}
+
+#about .word{
+  text-align: center;
+  
+}
+
+
+
+
+
+
+
+
+
+
